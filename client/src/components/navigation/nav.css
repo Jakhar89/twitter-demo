@@ -1,0 +1,22 @@
+.navigation{
+    font-size: 1.2rem;
+    margin-bottom: 5px; 
+}
+.navigation ul{
+    text-align:left;
+}
+.navigation  ul li a{
+    color:black;
+    text-decoration: none;
+    padding: 5px;
+}
+.navigation  ul li{
+    border:none;
+    font-size: .9rem;
+    text-align:center;
+    background: white;
+    max-width: 20%;
+    float: left;
+    margin-right: 5%;
+    
+}

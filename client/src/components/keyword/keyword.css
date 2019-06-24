@@ -1,0 +1,9 @@
+.like-btn{
+    font-size: 1rem;
+    background: #1da1f2;
+    color:white;
+    margin-left: 5px;
+}
+.liked{
+    background: #1da1f2;
+}
