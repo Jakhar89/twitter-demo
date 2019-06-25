@@ -27,7 +27,7 @@ const {
     fields: () => ({
         id: { type: GraphQLFloat },
         id_str: { type: GraphQLString },
-        favorited: { type: GraphQLBoolean },
+        favorited: { type: GraphQLBoolean},
         text: { type: GraphQLString },
         user:{type: User}
     })

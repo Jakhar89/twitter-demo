@@ -10,8 +10,8 @@ query timelinesQuery($var: String){
     timelines(screen_name:$var) {
     id
     id_str
-    text
     favorited
+    text
     user {
         name
       }
