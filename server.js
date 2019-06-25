@@ -13,10 +13,10 @@ app.use(
       graphiql: true
     })
   );
-  // app.use(express.static('public'));
-  // app.get('*', function(req, res) {
-  //   res.sendfile(path.resolve(__dirname,'public','index.html'));
-  // })
+  app.use(express.static('public'));
+  app.get('*', function(req, res) {
+    res.sendfile(path.resolve(__dirname,'public','index.html'));
+  })
 
 const port = process.env.PORT || 5000;
 
