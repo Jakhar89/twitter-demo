@@ -2,10 +2,10 @@ const axios = require('axios');
 var twitter = require('twitter');
 
 var client = new twitter({
-    consumer_key: 'XXXXXXXX',
-    consumer_secret: 'XXXXXXXX',
-    access_token_key: 'XXXXXXXX',
-    access_token_secret: 'XXXXXXXX'
+    consumer_key: process.env.consumer_key,
+    consumer_secret: process.env.consumer_secret,
+    access_token_key: process.env.access_token_key,
+    access_token_secret: process.env.access_token_secret
 });
 
 const {
