@@ -2,12 +2,13 @@
 
 var express = require('express');
 var twitter = require('twitter');
+var key = require('./auth')
 
 var client = new twitter({
-    consumer_key: process.env.consumer_key,
-    consumer_secret: process.env.consumer_secret,
-    access_token_key: process.env.access_token_key,
-    access_token_secret: process.env.access_token_secret
+    consumer_key: key.consumer_key,
+    consumer_secret: key.consumer_secret,
+    access_token_key:key.access_token_key,
+    access_token_secret: key.access_token_secret
 });
 
   

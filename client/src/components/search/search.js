@@ -11,7 +11,7 @@ query timelinesQuery($var: String){
     id
     id_str
     text
-    favourited
+    favorited
     user {
         name
       }
