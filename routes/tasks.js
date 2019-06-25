@@ -2,6 +2,7 @@
 
 var express = require('express');
 var twitter = require('twitter');
+
 var client = new twitter({
     consumer_key: 'XXXXXXXX',
     consumer_secret: 'XXXXXXXX',
@@ -13,15 +14,16 @@ var client = new twitter({
 var router = express.Router();
 
 // Get feed based upon handlename
-router.get('/twitter', function(req, res, next){
-    let key = req.query.key
-    let params = {screen_name: `${key}`};
-    client.get('statuses/user_timeline', params, function(error, tweets, response) {
-        if (!error) {
-            res.json(tweets);
-        }
-      });
-});
+// router.get('/twitter', function(req, res, next){
+//     let key = req.query.key
+//     let params = {screen_name: `${key}`};
+//     client.get('statuses/user_timeline', params, function(error, tweets, response) {
+//         if (!error) {
+//             res.json(tweets);
+//         }
+//       });
+// });
+
 //Post a Tweet
 router.get('/tweetPost', function(req, res, next){
     let key = req.query.key

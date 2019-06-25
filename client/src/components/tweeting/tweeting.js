@@ -14,7 +14,7 @@ class Tweeting extends Component{
     posting=()=>{
         fetch(`/api/tweetPost?key=${this.state.text}`)
             .then(res => res.json())
-            .then(tweet => this.setState({tweet:tweet,text:null}, () => console.log('Customers fetched...', tweet)));
+            .then(tweet => this.setState({tweet:tweet}, () => console.log('Customers fetched...', tweet)));
     }
     render(){
         return(
