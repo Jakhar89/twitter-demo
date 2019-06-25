@@ -62,6 +62,7 @@ class Search extends Component {
   
 
   render() {
+    console.log(this.state)
     return (
       <div>
         <h1>Search Twitter</h1>
@@ -71,20 +72,23 @@ class Search extends Component {
             <input type='text' onChange={this.inputChange}/>
             <button onClick={(this.call==='keyword')?this.keyword:this.queryS}>Search</button>
           </div>
-          <h3>{(this.state.tweets.length>0 && this.call!=='keyword')?this.state.tweets[0].user.name:null}</h3>
-          <ul>
-
-          {this.state.tweets.map(el => {
-            let check = this.state.like.includes(el.id);
-            let fav = el.favorited
-            return <li key={el.id} className={(check||fav)?'liked':null}>
-                        {el.text}
-                      {(!(check||fav))?<button className='like-btn' onClick={this.like.bind(this,el.id_str)}>Like</button>
-                      :null}
-                  </li>
-          })}
-          
-          </ul>
+          {(this.state.tweets )?
+            <React.Fragment>
+              <h3>{(this.state.tweets.length>0 && this.call!=='keyword')?this.state.tweets[0].user.name:null}</h3>
+              <ul>
+                {this.state.tweets.map(el => {
+                  let check = this.state.like.includes(el.id);
+                  let fav = el.favorited
+                  return <li key={el.id} className={(check||fav)?'liked':null}>
+                              {el.text}
+                            {(!(check||fav))?<button className='like-btn' onClick={this.like.bind(this,el.id_str)}>Like</button>
+                            :null}
+                        </li>
+                })}
+              </ul>
+            </React.Fragment>
+              :null
+          }
       </div>
     );
   }
